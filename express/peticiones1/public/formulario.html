@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>formulario con peticion sincrona</h1>
+        <!-- El atributo action define la ubicación (URL) donde se envían los datos que el formulario ha recopilado cuando se validan. -->
+        <!-- El atributo method define con qué método HTTP se envían los datos (generalmente get o post). -->
+		<form action="/guardar" method="POST">
+			<label for="name">Nombre</label>
+			<input id="name" name="nombre" type="text" placeholder="ingrese su nombre" />
+
+			<label for="apellido">Apellido</label>
+            <input id="apellido" name="apellido" type="text" placeholder="ingrese su apellido" />
+
+            <label for="nacimiento">fecha de nacimiento</label>
+            <input id="nacimiento" name="fecha" type="date" placeholder="" />
+
+            Pais:
+            <select name="paiss" name="" id="">
+                <option value="argentina">argentina</option>
+                <option value="brasil">brasil</option>
+                <option value="uruguay">uruguay</option>
+            </select>
+            <button name="guardar" type="submit">Guardar</button>
+        </form>
+        
+      
+	</body>
+</html>
