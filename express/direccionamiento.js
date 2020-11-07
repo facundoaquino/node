@@ -39,7 +39,28 @@ app.get('/capitulo/:numerocapitulo', (req, res) => {
 
 
 
+/*---------------------- parametros opcionales ---------------------*/
+
+//podemos usar desestrucdturacion de lo que viene del req.params
+//parametro opcional :parametro?
+app.get('/birra/:marca?',(req,res)=>{
+    const {marca}=req.params
+    console.log(req.params);
+    res.send(`la marca de la birra es : ${marca||'no ingresaste ninguna marca'}`)
+})
+
 //levantando servidor
+
+
+
+
+
+/*---------------------- ejemplo con expresion regular ---------------------*/
+
+//para poner una regexp en un parametro hay que hacerlo entre parentesis ()
+app.get('/reg/:id([0-9]{4})',(req,res)=>{
+    res.send('expresion regular correcta!')
+})
 
 app.listen(3000, () => {
 	//no es obligatorio el 2do parametro , por convencion podemos dar un mensaje
