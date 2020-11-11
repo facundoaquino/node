@@ -38,12 +38,17 @@ const bodyParser =require('body-parser')
 /*con POST LOS DATOS SE ENVIAN EMPAQUETADOS NO VISIBLES EN EL CUERPO DE LA PETICION*/
 app.use(bodyParser.json())
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//-----------express ya viene integrado para soportar el parseado de body req
+// app.use(express.json())
+// app.use(express.urlencoded({extended:true}))
+
 app.use(bodyParser.urlencoded({extended:true}))
 app.post('/guardar',(req,res)=>{
 
     res.send(`Guardar el usuario ${req.body.nombre}`)
     console.log(req.body);
-    console.log(req);
+    // console.log(req);
 })
 
  app.listen(3005)
