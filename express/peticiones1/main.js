@@ -51,4 +51,8 @@ app.post('/guardar',(req,res)=>{
     // console.log(req);
 })
 
+app.get('/',(req,res)=>{
+    res.send('hola')
+})
+
  app.listen(3005)
